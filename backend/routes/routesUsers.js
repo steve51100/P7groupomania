@@ -3,8 +3,13 @@ const router = express.Router();
 const auth = require('../middleware/auth');
 const userCtrl = require('../controlleurs/user');
 const bouncer = require('express-bouncer')(5000, 30000, 3);//Permet 3 essais ensuite interruption entre 5 secondes et 30 secondes
+
+
 //empêche les attaques par force-brute 
 bouncer.whitelist.push ("127.0.0.1");
+
+
+
 /**ROUTES UTILISATEUR */
 try{
     router.post('/signup', userCtrl.signup);//Création d'un nouveau utilisateur
