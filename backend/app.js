@@ -5,6 +5,7 @@ const app = express();
 
 //routes CRUD
 const routesUsers = require('./routes/routesUsers');
+const routesPosts = require('./routes/routesPosts');
 
 app.use(bodyParser.json());
 
@@ -18,4 +19,5 @@ app.use((req, res, next) => {
 //Endpoints utilisés par l'API du serveur localhost: 3000
 
 app.use('/api/auth', routesUsers);
+app.use('/api/posts', routesPosts);
 module.exports = app;
