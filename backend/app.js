@@ -6,6 +6,7 @@ const app = express();
 //routes CRUD
 const routesUsers = require('./routes/routesUsers');
 const routesPosts = require('./routes/routesPosts');
+const routesMod = require('./routes/routesMod');
 
 app.use(bodyParser.json());
 
@@ -20,4 +21,7 @@ app.use((req, res, next) => {
 
 app.use('/api/auth', routesUsers);
 app.use('/api/posts', routesPosts);
+app.use('/api/moderation', routesMod);
+
+
 module.exports = app;
