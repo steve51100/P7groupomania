@@ -7,6 +7,8 @@ const app = express();
 const routesUsers = require('./routes/routesUsers');
 const routesPosts = require('./routes/routesPosts');
 const routesMod = require('./routes/routesMod');
+const routesGifs = require('./routes/routesGifs');
+
 
 app.use(bodyParser.json());
 
@@ -22,6 +24,7 @@ app.use((req, res, next) => {
 app.use('/api/auth', routesUsers);
 app.use('/api/posts', routesPosts);
 app.use('/api/moderation', routesMod);
+app.use('/api/gifs', routesGifs);
 
 
 module.exports = app;
