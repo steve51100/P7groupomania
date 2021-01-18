@@ -2,6 +2,7 @@
     <v-app id="accueil" class="text-center">
         <top-header/>
         <div class="ml-12">
+           
              <h1 class="ma-4">Les gifs pour la battle :</h1>
             <router-view></router-view>
             <v-container >
@@ -66,23 +67,36 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    #accueil{
+    background-image: url("../assets/icon.png");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position-x: 50%;
+    
+    }
     h1{
         color: #d1515a;
     }
     .flex{
+       
+        border:2px solid rgb(235, 135, 112);
+        border-radius: 20px;
+        width: 60%;
+        margin: auto;
         margin-top:20px;
-        border:2px solid #6e6e6e;
+        box-shadow: 0px 0px 60px rgb(235, 135, 112);
     }
     .image{
         width:30%;
         margin:auto;
+        margin-bottom: 30px;
     }
     .header{
         background-color: rgb(94, 85, 83);
         color: white;
     }
     .button{
-        border:2px solid black;
+        border:2px solid rgb(235, 135, 112);
         padding:3px;
         background-color: #091f43;
         color:white;
@@ -93,6 +107,7 @@ export default {
        
         .flex{
             border:1px solid #6e6e6e;
+            width: 100%;
         }
         #image{
             width:300px;
