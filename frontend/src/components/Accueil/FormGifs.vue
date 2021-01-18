@@ -8,9 +8,9 @@
             </v-card-title>
             <v-card-text>
                 <v-form ref="form" class="ma-3" v-model="valid" >
-                    <v-text-field v-model="dataGif.title" :rules="titleRules" :counter="30" label="Title" autofocus required></v-text-field>
+                    <v-text-field v-model="dataGif.title" :rules="titleRules" :counter="50" label="Title" autofocus required></v-text-field>
                     <!--L'utilisateur écrit son nom ou un pseudo ou un surnom plus ludique-->
-                    <v-text-field v-model="dataGif.name" :rules="nameRules" :counte="50" label="Name"  required></v-text-field>
+                    <v-text-field v-model="dataGif.name" :rules="nameRules" :counte="50" label="Name / Pseudo"  required></v-text-field>
                     <v-text-field v-model="dataGif.url" :rules="urlRules" label="Adresse URL de type HTTP:" required></v-text-field>
                 </v-form>
             </v-card-text>
@@ -32,7 +32,7 @@ import TopHeader from "./TopHeader";
             
             titleRules: [
                 v => !!v || 'Le champs est requis',
-                v => (v && v.length <= 30) || 'Le titre comprend moins de 30 characters',
+                v => (v && v.length <= 50) || 'Le titre comprend moins de 50 characters',
             ],
             nameRules: [
                 v => !!v || 'Le champs est requis',
