@@ -70,6 +70,7 @@ export default {
     #accueil{
     background-image: url("../assets/icon.png");
     background-repeat: no-repeat;
+     background-attachment: fixed;
     background-size: 50%;
     background-position-x: 50%;
     
