@@ -9,6 +9,7 @@
                 <p>Prénom : {{ dataGet.firstName }}</p>
                 <p>Nom : {{ dataGet.lastName }}</p>
                 <p>Email : {{ dataGet.email }}</p>
+               
             </v-card-text>
             <v-card-actions class="d-flex justify-space-between">
                 <v-btn @click.stop="dialogUp=true" title="modifier mes informations">Modifier</v-btn>
@@ -69,7 +70,7 @@ export default {
             dataGet: { 
                 firstName: "",
                 lastName: "",
-                email: ""
+                email: "",
             },
             dataUp: {
                 firstName: "",

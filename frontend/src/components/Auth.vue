@@ -43,7 +43,9 @@
   border-radius: 20px;
   box-shadow: 0px 0px 60px rgb(114, 72, 72);
   background-image: url("../assets/icon.png");
+  background-repeat: no-repeat;
   background-size: 100%;
+  
   margin: auto;
 }
 img {
@@ -71,4 +73,32 @@ img {
             }
         }
     }
+
+     @media all and (max-width:500px){
+       #auth{
+         width: 100%;
+         height: 80%;
+       }
+       img{
+         width: 80%;
+         margin-top: 50px;
+       }
+     }
+     .signup__card{
+       width: 60%;
+       margin-left: 0px;
+     }
+     .container_auth{
+       width: 80%;
+     }
+     .login
+      {
+       width: 80% !important;
+     }
+     .signup{
+       width: 95%  !important;
+     }
+     
+     
+     
 </style>

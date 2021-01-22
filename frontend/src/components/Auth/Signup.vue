@@ -6,7 +6,7 @@
                     <v-text-field  v-model="dataSignup.firstName" :rules="nameRules" label="Prénom" prepend-icon="mdi-account-circle" autofocus required></v-text-field>
                     <v-text-field  v-model="dataSignup.lastName" :rules="nameRules" label="Nom" prepend-icon="mdi-account-circle" required></v-text-field>
                     <v-text-field  v-model="dataSignup.email" :rules="emailRules" label="e-mail" prepend-icon="mdi-at" required></v-text-field>
-                    <v-text-field  v-model="dataSignup.password" :rules="passRules" type="password" label="mot de passe" prepend-icon="mdi-lock" required></v-text-field>
+                    <v-text-field  v-model="dataSignup.password" :rules="passRules" type="password" label="mot de passe" prepend-icon="mdi-lock"  required></v-text-field>
                 </v-form>
                 <v-btn :disabled="!valid" class="success" @click="sendSignup()">Envoyer</v-btn>
                 <p v-if="msg">{{ message }}</p>
@@ -29,7 +29,7 @@ export default {
                 v => /.+@.+\..+/.test(v) || 'E-mail doit être valide',
             ],
             passRules: [
-                v => !!v || 'Le mot de passe est requis !'
+                v => !!v || 'le mot de passe dois contenir 08 caractères minimum (dont 1 majuscule, 1 minuscule, 1 chiffre, pas de symbole, espaces non autorisés) !'
             ],
             dataSignup:{
                 firstName: "",

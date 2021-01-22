@@ -24,7 +24,7 @@ export default {
                 v => /.+@.+\..+/.test(v) || 'E-mail invalide',
             ],
             passRules: [
-                v => !!v || 'Mot de passe requis'
+                v => !!v || '! Attention ! Après 3 erreurs , vous serez bloquer 3minutes'
             ],
             dataLogin: {
                 email: "",
@@ -45,10 +45,11 @@ export default {
                     localStorage.token = log.token;
                     localStorage.moderation = log.moderation;
                     this.$router.push('/Accueil');  
+                  
                 })
                 .catch(error => {
                     console.log(error);
-                    this.message = 'Erreur sur la base de donnée';
+                    this.message = 'Email ou mots de passe incorect';
                     this.msg = true 
                 }); 
         }

@@ -331,10 +331,16 @@ export default {
     background-repeat: no-repeat;
     background-size: 50%;
     background-position-x: 50%;
+     background-attachment: fixed;
     
     }
     .post{
-        border: 2px solid #6e6e6e;
+        border:2px solid  rgb(235, 135, 112);
+        border-radius: 20px;
+        width: 80%;
+        margin: auto;
+        margin-top:20px;
+        box-shadow: 0px 0px 60px  rgb(235, 135, 112);
     }
     h1{
         text-align: center;
