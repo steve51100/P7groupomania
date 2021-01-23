@@ -16,6 +16,7 @@
                 <v-btn @click.stop="dialogDel=true" title="supprimer mon profil">Supprimer</v-btn>
             </v-card-actions>
         </v-card>
+        
 
         <v-dialog persistent v-model="dialogUp" max-width="600px">
             <v-card>
