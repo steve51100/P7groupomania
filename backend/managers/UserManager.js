@@ -2,7 +2,8 @@ const connectdb = require('../connectdb.js');
 const mysql = require('mysql');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const dotenv = require('dotenv').config();
+const path = require('path');
+const dotenv = require('dotenv').config({ path: process.cwd() + '/.env' });
 
 
 
@@ -38,7 +39,7 @@ class UserManager {
                             if (!valid) return reject({ error: 'Mot de passe incorrect !' });
                             resolve({
                                 userId: result[0].id,
-                                token: jwt.sign(
+                                token: process.env.jwt.sign(
                                     { userId: result[0].id,
                                     moderation: result[0].moderation },
                                     'process.env.jwt',

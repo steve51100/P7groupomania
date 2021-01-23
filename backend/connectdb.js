@@ -1,13 +1,14 @@
 const mysql = require('mysql');
 /*Utilisation du module mysql de node*/
-const dotenv = require('dotenv').config();
+const path = require('path');
+const dotenv = require('dotenv').config({ path: process.cwd() + '/.env' });
 console.log('connectdb');
 //Création de la connection
 let connectdb = mysql.createConnection({ 
     host: 'localhost', 
-    user: 'steve', 
-    password: 'Maison@51', 
-    database: 'p7groupomania', 
+    user: process.env.DB_USER, 
+    password: process.env.DB_PASSWORD, 
+    database: process.env.DB_DATABASE, 
 });
 connectdb.connect(function(err) { 
     if (err) throw err;
