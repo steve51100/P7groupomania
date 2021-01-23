@@ -14,10 +14,9 @@ Le projet consiste à construire un réseau social interne pour les employés de
 #### 💡 &nbsp; Faire tourner le Frontend
 
 * Ouvrir le terminal sur ce dossier et exécuter  `npm install` pour installer les dépendances.
-* Exécuter `npm install node-sass@4.14.1` pour installer sass.
 * Le projet a été généré avec @vue/cli 4.5.10.
 * Démarrer ng serve (ou `npm run serve`) pour avoir accès au serveur de développement.
-* Rendez-vous sur `http://localhost:4200`.
+* Rendez-vous sur `http://localhost:8080`.
 
 
 #### 💡 &nbsp; Faire tourner le Backend
@@ -25,8 +24,9 @@ Le projet consiste à construire un réseau social interne pour les employés de
 * Ouvrir le terminal sur ce dossier.
 * Pour utiliser le serveur, chargez le package nodemon : `npm install -g nodemon`.
 * Puis lancez le serveur: `nodemon server`.
-* Crée un fichier .env(veuillez demander les identifiant lors de l'entretien).
+* Remplir le fichier .env 
 * L'application va se recharger automatiquement si vous modifiez un fichier source.
+
 #### Pour faire court
 
 Si les packages sont déja installés, ces commandes suffisent à démarrer les serveurs.
