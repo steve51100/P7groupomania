@@ -1,7 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-
+const helmet = require("helmet");
+var filter = require('content-filter');
 
 //routes CRUD
 const routesUsers = require('./routes/routesUsers');
@@ -18,6 +19,10 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
     next();
 });
+
+
+app.use(helmet());
+app.use(filter());
 
 //Endpoints utilisés par l'API du serveur localhost: 3000
 
